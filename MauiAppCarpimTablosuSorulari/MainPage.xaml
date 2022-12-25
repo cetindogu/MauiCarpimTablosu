@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCarpimTablosuSorulari.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <!--<Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />-->
+            <Label
+                x:Name="LblKalanSoruSayisi"
+                Text="Kalan Soru Sayısı : 100"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            <Label
+                x:Name="LblToplamYanlisYanitSayisi"
+                Text="Toplam Yanlış Yanıt Sayısı : 0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            <Label
+                Text="Çarpım Tablosu, Kendini Dene!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Doğru Seçeneği Seçiniz"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Doğru Seçeneği Seçiniz"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            <Label
+                x:Name="LblSoru"
+                Text=""
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="BtnYanit1"
+                Text="Click me"
+                SemanticProperties.Hint="1. Seçenek"
+                Clicked="OnClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="BtnYanit2"
+                Text="Click me"
+                SemanticProperties.Hint="2. Seçenek"
+                Clicked="OnClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="BtnTestiSonlandir"
+                Text="Testi Sonlandır"
+                SemanticProperties.Hint="Testi Sonlandır"
+                Clicked="BtnTestiSonlandir_Clicked"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
