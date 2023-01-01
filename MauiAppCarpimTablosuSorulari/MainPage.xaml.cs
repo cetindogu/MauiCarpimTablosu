@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Maui.Alerts;
-using CommunityToolkit.Maui.Core;
-using CommunityToolkit.Maui.Views;
+﻿using CommunityToolkit.Maui.Views;
 
 namespace MauiAppCarpimTablosuSorulari;
 
@@ -11,11 +9,11 @@ public partial class MainPage : ContentPage
     int dogruYanit = 0;
     string siradakiSoru = "";
     List<string> liste = new();
-
+    private readonly IToastMessage _toastMessage;
     public MainPage()
     {
+        _toastMessage = DependencyService.Get<IToastMessage>();
         Generate();
-
         InitializeComponent();
         GetRandomSoru();
     }
@@ -92,6 +90,7 @@ public partial class MainPage : ContentPage
         }
         else
         {
+            ToastMesajVer("YANLIŞ");
             toplamYanlisYanitSayisi++;
             LblToplamYanlisYanitSayisi.Text = $"Toplam Yanlış Yanıt Sayısı : {toplamYanlisYanitSayisi}";
         }
@@ -115,11 +114,7 @@ public partial class MainPage : ContentPage
     }
     private void ToastMesajVer(string text)
     {
-        CancellationTokenSource cancellationTokenSource = new();
-        ToastDuration duration = ToastDuration.Short;
-        double fontSize = 32;
-        var toast = Toast.Make(text, duration, fontSize);
-        toast.Show(cancellationTokenSource.Token);
+        _toastMessage.ShortToast(text);     
     }
 
     private void BtnTestiSonlandir_Clicked(object sender, EventArgs e)
