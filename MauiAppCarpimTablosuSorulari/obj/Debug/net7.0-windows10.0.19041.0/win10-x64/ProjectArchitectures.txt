@@ -1,0 +1,1 @@
+C:\temp\MauiCarpimTablosu\MauiAppCarpimTablosuSorulari\MauiAppCarpimTablosuSorulari.csproj;x64
