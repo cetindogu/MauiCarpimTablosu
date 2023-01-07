@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {},
     ".NETCoreApp,Version=v7.0/win10-x64": {
-      "MauiAppCarpimTablosuSorulari/1.0": {
+      "MauiAppCarpimTablosuSorulari/1.2": {
         "dependencies": {
           "CommunityToolkit.Maui": "3.1.0",
           "CommunityToolkit.Maui.Markup": "2.1.0",
@@ -1027,7 +1027,7 @@
     }
   },
   "libraries": {
-    "MauiAppCarpimTablosuSorulari/1.0": {
+    "MauiAppCarpimTablosuSorulari/1.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
