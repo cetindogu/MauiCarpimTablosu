@@ -216,7 +216,8 @@ public partial class MainPage : ContentPage
 
     private void BtnTestiSonlandir_Clicked(object sender, EventArgs e)
     {
-        PopopGoster("TESTİ BAŞARIYLA BİTİRDİNİZ");
+        //PopopGoster("TESTİ BAŞARIYLA BİTİRDİNİZ");
+        Application.Current.Quit();
     }
 }
 

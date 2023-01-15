@@ -103,10 +103,11 @@
 
             <Button
                 x:Name="BtnTestiSonlandir"
-                Text="Testi Sonlandır"
+                Text="Çıkış / Sonlandır"
                 SemanticProperties.Hint="Testi Sonlandır"
                 Clicked="BtnTestiSonlandir_Clicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" 
+                BackgroundColor="Red"/>
         </VerticalStackLayout>
     </ScrollView>
 
