@@ -5,10 +5,22 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
+            Spacing="15"
+            Padding="15,0"
+            VerticalOptions="Start">
+            <Border Stroke="#C49B33"
+        StrokeThickness="4"
+        StrokeShape="RoundRectangle 40,0,0,40"
+        Background="#2B0B98"
+        Padding="16,8"
+        HorizontalOptions="Center">
+                <Label
+                Text="Çarpım Tablosu Soruları"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="22"
+                HorizontalOptions="Center" TextColor="White" />
+            </Border>
+           
             <!--<Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
@@ -18,34 +30,65 @@
                 x:Name="LblKalanSoruSayisi"
                 Text="Kalan Soru Sayısı : 100"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
+                FontSize="22"
                 HorizontalOptions="Center" />
             <Label
                 x:Name="LblToplamYanlisYanitSayisi"
-                Text="Toplam Yanlış Yanıt Sayısı : 0"
+                Text="Toplam Yanlış Sayısı : 0"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-            <Label
-                Text="Çarpım Tablosu, Kendini Dene!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
+                FontSize="22"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Doğru Seçeneği Seçiniz"
+                Text="Soru"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Doğru Seçeneği Seçiniz"
                 FontSize="18"
                 HorizontalOptions="Center" />
+
             <Label
                 x:Name="LblSoru"
                 Text=""
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
+            <Label
+                Text="Doğru Seçeneği Seçiniz"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Doğru Seçeneği Seçiniz"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            <Border Stroke="#C49B33"
+        StrokeThickness="4"
+        StrokeShape="RoundRectangle 40,0,0,40"
+        Background="#2B0B98"
+        Padding="16,8"
+        HorizontalOptions="Center">
+                <Grid x:Name="gridAnswering" HorizontalOptions="Fill" >
+                    <Grid.RowDefinitions >
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0"  Grid.Column="0"
+                x:Name="BtnYanit1"
+                Text="Click me 1"
+                SemanticProperties.Hint="1. Seçenek"
+                Clicked="OnClicked"
+                HorizontalOptions="Center" />
+                    <Button Grid.Row="0"  Grid.Column="1"
+                x:Name="BtnYanit2"
+                Text="Click me 2"
+                SemanticProperties.Hint="2. Seçenek"
+                Clicked="OnClicked"
+                HorizontalOptions="Center" />
 
-            <Button
+                </Grid>
+            </Border>
+
+            <!--<Button
                 x:Name="BtnYanit1"
                 Text="Click me"
                 SemanticProperties.Hint="1. Seçenek"
@@ -56,7 +99,7 @@
                 Text="Click me"
                 SemanticProperties.Hint="2. Seçenek"
                 Clicked="OnClicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" />-->
 
             <Button
                 x:Name="BtnTestiSonlandir"
