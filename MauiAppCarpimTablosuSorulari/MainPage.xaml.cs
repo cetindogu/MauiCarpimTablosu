@@ -21,7 +21,7 @@ public partial class MainPage : ContentPage
     {
         for (int j = 1; j <= 10; j++)
         {
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 12; i++)
             {
                 Console.WriteLine($"{i} X {j} = {(i * j)}");
                 liste.Add($"{i} X {j}");
