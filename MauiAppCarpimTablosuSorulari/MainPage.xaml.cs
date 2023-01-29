@@ -176,21 +176,28 @@ public partial class MainPage : ContentPage
         dogruYanit = -1;
         LblKalanSoruSayisi.Text = $"Kalan Soru Sayısı : {liste.Count}";
     }
-    private void OnClicked(object sender, EventArgs e)
+    private async void OnClicked(object sender, EventArgs e)
     {
         var secilenDugmeMetni = ((Button)sender).Text;
         if (dogruYanit.ToString() == secilenDugmeMetni)
         {
+            PlayAudio("bravo.mp3");
             ToastMesajVer("DOĞRU");
             RemoveCorrentAnswer();
             GetNextQuestion();
         }
         else
         {
+            PlayAudio("ilginc_insan.mp3");
             ToastMesajVer("YANLIŞ");
             toplamYanlisYanitSayisi++;
             LblToplamYanlisYanitSayisi.Text = $"Toplam Yanlış Yanıt Sayısı : {toplamYanlisYanitSayisi}";
         }
+    }
+    private async void PlayAudio(string rawUrl)
+    {
+        var stream = await FileSystem.OpenAppPackageFileAsync(rawUrl/*"ilginc_insan.mp3"*/);
+        Plugin.Maui.Audio.AudioManager.Current.CreatePlayer(stream).Play();
     }
     private void PopopGoster(string message)
     {
